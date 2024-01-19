@@ -3,24 +3,39 @@ const checkButton = document.getElementById("check-button");
 const resultsDiv = document.getElementById("results");
 
 checkButton.addEventListener("click", () => {
-    const resumeText = resumeTextArea.value;
+  const resumeText = resumeTextArea.value;
 
-    // Perform ATS compatibility checks here
-    const results = runATSChecks(resumeText); // Replace with your actual checking logic
+  // Perform ATS compatibility checks here
+  const results = runATSChecks(resumeText); // Replace with your actual checking logic
 
-    resultsDiv.innerHTML = results;
+  resultsDiv.innerHTML = results;
 });
 
 // Example of a simple keyword checking function
 function runATSChecks(resumeText) {
-    const keywords = ["JavaScript", "HTML", "CSS", "problem-solving", "team player"];
-    let keywordCount = 0;
+  const keywords = [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "problem-solving",
+    "team player",
+    "React.js",
+    "Next.js",
+    "  AJAX",
+    " Responsive Design",
+    " APIs",
+    "  Debugging Tools",
+    "Single Page Applications",
 
-    keywords.forEach(keyword => {
-        if (resumeText.includes(keyword)) {
-            keywordCount++;
-        }
-    });
+    " UI/UX Design",
+  ];
+  let keywordCount = 0;
 
-    return `Your resume contains ${keywordCount} out of ${keywords.length} important keywords.`;
+  keywords.forEach((keyword) => {
+    if (resumeText.includes(keyword)) {
+      keywordCount++;
+    }
+  });
+
+  return `Your resume contains ${keywordCount} out of ${keywords.length} important keywords.`;
 }

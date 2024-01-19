@@ -1,4 +1,8 @@
 /* Basic styling for the page */
+*{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 14%, rgba(122,122,217,1) 48%, rgba(2,0,36,1) 100%);
+}
 body {
     font-family: sans-serif;
     margin: 0;
